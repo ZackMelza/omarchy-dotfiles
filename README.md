@@ -60,7 +60,7 @@ After restoring, the personal shortcuts are:
 | `Super+E` | File manager |
 | `Super+L` | Lock system |
 | `Super+D` | Discord |
-| `Super+Shift+C` | Codex session browser |
+| `Super+Shift+C` | Codex |
 
 `Super+C` remains Omarchy's Universal Copy binding.
 
