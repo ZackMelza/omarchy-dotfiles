@@ -13,6 +13,10 @@ The reusable configuration is under `omarchy/hypr/`:
 - `bindings.lua` — personal keybindings and keybindings-help descriptions.
 - `workspace_rules.lua` — application-to-workspace placement rules.
 
+The reusable Zsh configuration is under `zsh/`:
+
+- `.zshrc` — loads Omarchy's user environment setup.
+
 Current application placement includes browsers on workspace 2, VS Code and
 other IDEs on 3, Steam/Lutris/Heroic on 5, Discord and messaging apps on 7,
 and games on 8. Email, screen sharing, virtual machines, and multimedia are
@@ -34,6 +38,7 @@ cp ~/dotfiles/omarchy/hypr/hyprland.lua ~/.config/hypr/
 cp ~/dotfiles/omarchy/hypr/input.lua ~/.config/hypr/
 cp ~/dotfiles/omarchy/hypr/bindings.lua ~/.config/hypr/
 cp ~/dotfiles/omarchy/hypr/workspace_rules.lua ~/.config/hypr/
+cp ~/dotfiles/zsh/.zshrc ~/.zshrc
 
 luac -p ~/.config/hypr/hyprland.lua
 luac -p ~/.config/hypr/input.lua
