@@ -21,6 +21,9 @@ hl.window_rule({
   workspace = "3",
 })
 
+-- Codex runs inside an Omarchy-managed terminal with this app ID.
+hl.window_rule({ match = { class = "^org\\.omarchy\\.codex$" }, workspace = "3" })
+
 -- Screen sharing / virtual machines
 hl.window_rule({ match = { class = "^com\\.obsproject\\.Studio$" }, workspace = "4 silent" })
 hl.window_rule({ match = { class = "^(.virt-manager-wrapped|virt-manager)$" }, workspace = "6 silent" })

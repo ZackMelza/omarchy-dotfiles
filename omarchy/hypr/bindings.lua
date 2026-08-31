@@ -52,4 +52,4 @@ o.bind("SUPER + L", "Lock system", "omarchy-system-lock")
 -- Launch communication and development tools.
 o.bind("SUPER + D", "Discord", { launch = "discord" })
 hl.unbind("SUPER + SHIFT + C")
-o.bind("SUPER + SHIFT + C", "Codex", { launch = "codex" })
+o.bind("SUPER + SHIFT + C", "Codex", { tui = "codex" })
