@@ -16,6 +16,7 @@ The reusable configuration is under `omarchy/hypr/`:
 The reusable Zsh configuration is under `zsh/`:
 
 - `.zshrc` — loads Omarchy's user environment setup.
+- `starship.toml` — full-path prompt and Git status/counts.
 
 Current application placement includes browsers on workspace 2, VS Code and
 other IDEs on 3, Steam/Lutris/Heroic on 5, Discord and messaging apps on 7,
@@ -42,6 +43,7 @@ cp ~/dotfiles/omarchy/hypr/input.lua ~/.config/hypr/
 cp ~/dotfiles/omarchy/hypr/bindings.lua ~/.config/hypr/
 cp ~/dotfiles/omarchy/hypr/workspace_rules.lua ~/.config/hypr/
 cp ~/dotfiles/zsh/.zshrc ~/.zshrc
+cp ~/dotfiles/zsh/starship.toml ~/.config/starship.toml
 
 luac -p ~/.config/hypr/hyprland.lua
 luac -p ~/.config/hypr/input.lua

@@ -12,6 +12,11 @@ setopt HIST_IGNORE_SPACE
 setopt SHARE_HISTORY
 
 # Friendly command-line behavior.
+# Show completion candidates in a selectable menu when Tab is pressed.
+zstyle ':completion:*' menu select
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+zstyle ':completion:*' list-prompt '%S%M matches%s'
+zstyle ':completion:*' select-prompt '%S%p%s'
 autoload -Uz compinit && compinit
 bindkey -e
 setopt AUTO_CD
@@ -31,6 +36,14 @@ fi
 if [[ -r /usr/share/fzf/completion.zsh ]]; then
   source /usr/share/fzf/completion.zsh
 fi
+
+# Keep Tab on zsh's completion menu; fzf remains available through its other
+# key bindings and can still be invoked explicitly when needed.
+bindkey '^I' complete-word
+bindkey -M emacs '^I' complete-word
+bindkey -M viins '^I' complete-word
+bindkey -M menuselect '^I' menu-complete
+bindkey -M menuselect '\e[Z' reverse-menu-complete
 
 # Convenient aliases (the original commands remain available).
 if command -v eza >/dev/null 2>&1; then
