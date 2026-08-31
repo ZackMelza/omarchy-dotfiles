@@ -28,6 +28,9 @@ Install and launch Omarchy once first so its normal `~/.config/hypr/` files
 exist. Then run:
 
 ```bash
+sudo pacman -S zsh
+chsh -s /usr/bin/zsh
+
 git clone https://github.com/ZackMelza/omarchy-dotfiles.git ~/dotfiles
 mkdir -p ~/.config/hypr
 
