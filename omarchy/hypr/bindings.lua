@@ -48,3 +48,8 @@ o.bind("SUPER + E", "File manager", { omarchy = "nautilus" })
 
 hl.unbind("SUPER + L")
 o.bind("SUPER + L", "Lock system", "omarchy-system-lock")
+
+-- Launch communication and development tools.
+o.bind("SUPER + D", "Discord", { launch = "discord" })
+hl.unbind("SUPER + C")
+o.bind("SUPER + C", "Codex", { launch = "codex" })
