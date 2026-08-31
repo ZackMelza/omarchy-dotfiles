@@ -52,9 +52,9 @@ After restoring, the personal shortcuts are:
 | `Super+E` | File manager |
 | `Super+L` | Lock system |
 | `Super+D` | Discord |
-| `Super+C` | Codex |
+| `Super+Shift+C` | Codex |
 
-`Super+C` intentionally replaces Omarchy's Universal Copy binding.
+`Super+C` remains Omarchy's Universal Copy binding.
 
 ## Updating the backup
 
