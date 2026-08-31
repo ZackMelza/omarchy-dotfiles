@@ -8,10 +8,10 @@ success_symbol = "[❯](bold cyan)"
 
 [directory]
 # Show the complete path, including when inside a Git repository.
+format = "[$path]($style)[$read_only]($read_only_style) "
+home_symbol = "/home/zack"
 truncation_length = 0
 truncate_to_repo = false
-repo_root_style = "bold cyan"
-repo_root_format = "[$repo_root]($repo_root_style)[$path]($style)[$read_only]($read_only_style) "
 
 [git_branch]
 format = "[$branch]($style) "
