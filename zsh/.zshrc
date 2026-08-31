@@ -37,6 +37,12 @@ if [[ -r /usr/share/fzf/completion.zsh ]]; then
   source /usr/share/fzf/completion.zsh
 fi
 
+# Suggest previous and valid directory paths while typing commands such as cd.
+if [[ -r /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ]]; then
+  source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+  ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+fi
+
 # Keep Tab on zsh's completion menu; fzf remains available through its other
 # key bindings and can still be invoked explicitly when needed.
 bindkey '^I' complete-word
