@@ -1,1 +1,50 @@
-. "$HOME/.local/share/../bin/env"
+# Omarchy environment (adds ~/.local/bin to PATH when present).
+[[ -r "$HOME/.local/share/../bin/env" ]] && . "$HOME/.local/share/../bin/env"
+
+# History: keep it across sessions and avoid repeated entries.
+HISTFILE="$HOME/.zsh_history"
+HISTSIZE=10000
+SAVEHIST=10000
+setopt APPEND_HISTORY
+setopt HIST_EXPIRE_DUPS_FIRST
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_SPACE
+setopt SHARE_HISTORY
+
+# Friendly command-line behavior.
+autoload -Uz compinit && compinit
+bindkey -e
+setopt AUTO_CD
+
+# Modern tools, enabled only when installed.
+if command -v starship >/dev/null 2>&1; then
+  eval "$(starship init zsh)"
+fi
+
+if command -v zoxide >/dev/null 2>&1; then
+  eval "$(zoxide init zsh)"
+fi
+
+if [[ -r /usr/share/fzf/key-bindings.zsh ]]; then
+  source /usr/share/fzf/key-bindings.zsh
+fi
+if [[ -r /usr/share/fzf/completion.zsh ]]; then
+  source /usr/share/fzf/completion.zsh
+fi
+
+# Convenient aliases (the original commands remain available).
+if command -v eza >/dev/null 2>&1; then
+  alias ls='eza'
+  alias ll='eza -la'
+  alias la='eza -a'
+fi
+if command -v bat >/dev/null 2>&1; then
+  alias cat='bat'
+fi
+alias ..='cd ..'
+alias ...='cd ../..'
+
+# Show a compact system summary in interactive terminals.
+if [[ -o interactive ]] && command -v fastfetch >/dev/null 2>&1; then
+  fastfetch
+fi
