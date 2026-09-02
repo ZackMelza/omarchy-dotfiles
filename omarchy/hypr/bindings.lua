@@ -53,3 +53,25 @@ o.bind("SUPER + L", "Lock system", "omarchy-system-lock")
 o.bind("SUPER + D", "Discord", { launch = "discord" })
 hl.unbind("SUPER + SHIFT + C")
 o.bind("SUPER + SHIFT + C", "Codex", { tui = "codex" })
+
+-- Use Super + Ctrl + 1-0 to send the active window silently to a workspace.
+-- Move the default bar-panel shortcuts to the old silent-workspace combination.
+for workspace = 1, 10 do
+  local key = "code:" .. tostring(workspace + 9)
+  hl.unbind("SUPER + CTRL + " .. key)
+  hl.unbind("SUPER + SHIFT + ALT + " .. key)
+  o.bind(
+    "SUPER + CTRL + " .. key,
+    "Move window silently to workspace " .. workspace,
+    hl.dsp.window.move({ workspace = tostring(workspace), follow = false })
+  )
+end
+
+for panel = 1, 9 do
+  local key = "code:" .. tostring(panel + 9)
+  o.bind(
+    "SUPER + SHIFT + ALT + " .. key,
+    "Bar panel " .. panel,
+    "omarchy-shell -q shell togglePanelAt right " .. panel
+  )
+end

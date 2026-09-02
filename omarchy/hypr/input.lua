@@ -5,9 +5,9 @@
 -- See https://wiki.hypr.land/Configuring/Basics/Variables/#input
 hl.config({
   input = {
-    -- Use multiple keyboard layouts and switch between them with Left Alt + Right Alt.
+    -- Use multiple keyboard layouts and switch between them with Alt + Shift.
     kb_layout = "us,dk,eu",
-    kb_options = "grp:alts_toggle",
+    kb_options = "grp:alt_shift_toggle",
 
     -- Use a specific keyboard variant if needed (e.g. intl for international keyboards).
     kb_variant = "intl",
