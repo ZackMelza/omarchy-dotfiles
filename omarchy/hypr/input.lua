@@ -6,11 +6,11 @@
 hl.config({
   input = {
     -- Use multiple keyboard layouts and switch between them with Alt + Shift.
-    kb_layout = "us,dk,eu",
+    kb_layout = "us,gr",
     kb_options = "grp:alt_shift_toggle",
 
-    -- Use a specific keyboard variant if needed (e.g. intl for international keyboards).
-    kb_variant = "intl",
+    -- Use the standard keyboard variant so punctuation keys are not dead keys.
+    kb_variant = "",
   },
 })
 
