@@ -9,7 +9,7 @@ user files that should be restored after a fresh installation.
 The reusable configuration is under `omarchy/hypr/`:
 
 - `hyprland.lua` — loads the personal modules, including workspace rules.
-- `input.lua` — keyboard layout/options and normal Caps Lock behavior.
+- `input.lua` — US/Greek keyboard layouts, Alt+Shift switching, and normal Caps Lock behavior.
 - `bindings.lua` — personal keybindings and keybindings-help descriptions.
 - `workspace_rules.lua` — application-to-workspace placement rules.
 
@@ -17,6 +17,13 @@ The reusable Zsh configuration is under `zsh/`:
 
 - `.zshrc` — loads Omarchy's user environment setup.
 - `starship.toml` — full-path prompt and Git status/counts.
+
+The custom Omarchy theme is under `omarchy/themes/symbiote/`:
+
+- `colors.toml` — black-suit palette with cool web highlights and crimson accents.
+- `backgrounds/` — matching wallpapers, including the original
+  `marvel-black-suit.webp` reference image plus `symbiote.png`, `city-web.png`,
+  `black-weave.png`, and `moonlit-rooftop.png`.
 
 Current application placement includes browsers on workspace 2, VS Code and
 other IDEs on 3, Steam/Lutris/Heroic on 5, Discord and messaging apps on 7,
@@ -63,6 +70,9 @@ After restoring, the personal shortcuts are:
 | `Super+L` | Lock system |
 | `Super+D` | Discord |
 | `Super+Shift+C` | Codex |
+
+The ThinkPad F1 mute key remains available while locked and uses the custom
+audio-sink mute handler.
 
 `Super+C` remains Omarchy's Universal Copy binding.
 

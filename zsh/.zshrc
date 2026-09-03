@@ -48,8 +48,6 @@ fi
 bindkey '^I' complete-word
 bindkey -M emacs '^I' complete-word
 bindkey -M viins '^I' complete-word
-bindkey -M menuselect '^I' menu-complete
-bindkey -M menuselect '\e[Z' reverse-menu-complete
 
 # Convenient aliases (the original commands remain available).
 if command -v eza >/dev/null 2>&1; then

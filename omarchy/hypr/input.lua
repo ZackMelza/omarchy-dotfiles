@@ -7,6 +7,7 @@ hl.config({
   input = {
     -- Use multiple keyboard layouts and switch between them with Alt + Shift.
     kb_layout = "us,gr",
+    -- Switch between layouts with Alt + Shift; keep Caps Lock as Caps Lock.
     kb_options = "grp:alt_shift_toggle",
 
     -- Use the standard keyboard variant so punctuation keys are not dead keys.

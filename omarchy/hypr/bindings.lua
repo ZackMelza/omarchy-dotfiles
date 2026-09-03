@@ -15,6 +15,10 @@
 -- Unbind default SUPER+W (close window) before replacing it.
 hl.unbind("SUPER + W")
 
+-- Keep the ThinkPad F1 mute indicator synchronized with the active audio sink.
+hl.unbind("XF86AudioMute")
+o.bind("XF86AudioMute", "Mute", "thinkpad-audio-mute-toggle", { locked = true })
+
 -- Add a new binding.
 -- o.bind("SUPER + SHIFT + R", "SSH", "alacritty -e ssh your-server")
 
