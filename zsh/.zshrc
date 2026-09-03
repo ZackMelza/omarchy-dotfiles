@@ -51,9 +51,9 @@ bindkey -M viins '^I' complete-word
 
 # Convenient aliases (the original commands remain available).
 if command -v eza >/dev/null 2>&1; then
-  alias ls='eza'
-  alias ll='eza -la'
-  alias la='eza -a'
+  alias ls='eza --group-directories-first'
+  alias ll='eza -la --group-directories-first'
+  alias la='eza -a --group-directories-first'
 fi
 if command -v bat >/dev/null 2>&1; then
   alias cat='bat'
