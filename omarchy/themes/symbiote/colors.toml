@@ -1,0 +1,32 @@
+mode = "dark"
+
+# Black-suit palette: ink-black surfaces, cool web highlights, and restrained crimson.
+accent = "#D9E3E8"
+selection = "#1A2C3A"
+muted = "#647582"
+
+background = "#030507"
+dark_background = "#070B11"
+darker_background = "#010203"
+lighter_background = "#0C141D"
+
+foreground = "#C1CCD2"
+dark_foreground = "#53636D"
+light_foreground = "#AEBCC5"
+bright_foreground = "#EEF3F5"
+
+red = "#762A38"
+yellow = "#80734E"
+orange = "#765342"
+green = "#4D6A5C"
+cyan = "#648596"
+blue = "#456B87"
+magenta = "#68566B"
+brown = "#57473E"
+
+bright_red = "#A23D4D"
+bright_yellow = "#A49462"
+bright_green = "#719480"
+bright_cyan = "#91B2C0"
+bright_blue = "#6D98B7"
+bright_magenta = "#8B718D"
